@@ -1,0 +1,9 @@
+
+machine:
+  python:
+    version: 2.7.12
+    
+test:
+  post:
+    - sh script.sh
+    - sh FichierTest.sh
