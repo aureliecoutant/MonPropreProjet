@@ -5,10 +5,8 @@ Version=cat /proc/version
 echo $Version > $MonFichier
 if [$Version=~ "fedora"] then
    yum list | grep "ssh" > $MonFichier
-else 
-   if [$Version=~ "debian"] 
-      dpkg --list | grep "ssh" > $MonFichier
-   fi
+elif [$Version=~ "debian"] then
+   dpkg --list | grep "ssh" > $MonFichier
 fi
 yum list > $MonAutreFichier
 
