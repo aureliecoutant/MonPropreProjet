@@ -7,7 +7,7 @@ if [$Version=~"fedora"]
  then
    yum list | grep "ssh" > $MonFichier
    yum list > $MonAutreFichier
-elif [$Version=~"debian"]
+elif [$Version=~"ubuntu"]
  then
    dpkg --list | grep "ssh" > $MonFichier
    dpkg --list > $MonAutreFichier
